@@ -8,22 +8,27 @@ part 'auth_notifier.g.dart';
 class AuthNotifier extends _$AuthNotifier {
   @override
   AuthState build() {
+    print('DEBUG: AuthNotifier build called');
     _checkAuthStatus();
     return const AuthState.initial();
   }
 
   Future<void> _checkAuthStatus() async {
+    print('DEBUG: Checking auth status...');
     final authRepo = ref.read(authRepositoryProvider);
     final isLoggedIn = await authRepo.isLoggedIn();
+    print('DEBUG: Is logged in: $isLoggedIn');
 
     if (isLoggedIn) {
       final user = await authRepo.getCurrentUser();
       if (user != null) {
+        print('DEBUG: Found authenticated user: ${user.email}');
         state = AuthState.authenticated(user);
         return;
       }
     }
 
+    print('DEBUG: No authenticated user found, setting unauthenticated');
     state = const AuthState.unauthenticated();
   }
 
@@ -60,9 +65,12 @@ class AuthNotifier extends _$AuthNotifier {
   }
 
   Future<void> playAsGuest() async {
+    print('DEBUG: playAsGuest called');
     // Create a temporary guest profile
     final guestProfile = UserProfile.initial('guest', 'guest@spygam.com');
+    print('DEBUG: Created guest profile: ${guestProfile.email}');
     state = AuthState.guest(guestProfile);
+    print('DEBUG: State updated to guest');
   }
 
   void clearError() {

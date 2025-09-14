@@ -24,6 +24,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final gameState = ref.watch(gameNotifierProvider);
+    final authState = ref.watch(authNotifierProvider);
+
+    // Auto-setup guest mode if no user is authenticated
+    if (authState is AuthStateUnauthenticated) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        ref.read(authNotifierProvider.notifier).playAsGuest();
+      });
+    }
 
     return Scaffold(
       body: Padding(

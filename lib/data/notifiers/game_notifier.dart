@@ -37,15 +37,27 @@ class GameNotifier extends _$GameNotifier {
   }
 
   void startGame({GameMode mode = GameMode.apprentice}) {
+    print('DEBUG: startGame called with mode: $mode');
     final user = _currentUser;
-    if (user == null) return;
+    print('DEBUG: current user: $user');
+
+    if (user == null) {
+      print('DEBUG: No user found, cannot start game');
+      return;
+    }
 
     final words = _wordsRepository.getWordsByLanguageAndLevel(
       user.learningLanguage,
       _getCurrentLevel(user),
     );
 
-    if (words.isEmpty) return;
+    print(
+        'DEBUG: Found ${words.length} words for language ${user.learningLanguage}');
+
+    if (words.isEmpty) {
+      print('DEBUG: No words available, cannot start game');
+      return;
+    }
 
     final random = math.Random();
     final selectedWord = words[random.nextInt(words.length)];
@@ -140,8 +152,8 @@ class GameNotifier extends _$GameNotifier {
       word: guessedWord,
       level: guessedWordObj?.level ?? 'Unknown',
       temperature: _temperatureToDouble(temperature),
-      temperatureClue:
-          _getTemperatureClue(guessedWordObj?.group.toString() ?? '', temperature),
+      temperatureClue: _getTemperatureClue(
+          guessedWordObj?.group.toString() ?? '', temperature),
       isHintUsed: false,
     );
 

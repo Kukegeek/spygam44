@@ -38,10 +38,31 @@ class HiveService {
       Hive.registerAdapter(UserProfileAdapter());
     }
 
-    // Open boxes
-    _wordsBox = await Hive.openBox<Word>(wordsBoxName);
-    _categoriesBox = await Hive.openBox<Category>(categoriesBoxName);
-    _userProfileBox = await Hive.openBox<UserProfile>(userProfileBoxName);
+    try {
+      // Try to open boxes normally
+      _wordsBox = await Hive.openBox<Word>(wordsBoxName);
+      _categoriesBox = await Hive.openBox<Category>(categoriesBoxName);
+      _userProfileBox = await Hive.openBox<UserProfile>(userProfileBoxName);
+    } catch (e) {
+      // If opening fails due to schema changes, delete and recreate boxes
+      print('Schema incompatibility detected. Clearing database...');
+      await _clearAllBoxes();
+
+      // Open boxes again
+      _wordsBox = await Hive.openBox<Word>(wordsBoxName);
+      _categoriesBox = await Hive.openBox<Category>(categoriesBoxName);
+      _userProfileBox = await Hive.openBox<UserProfile>(userProfileBoxName);
+    }
+  }
+
+  static Future<void> _clearAllBoxes() async {
+    try {
+      await Hive.deleteBoxFromDisk(wordsBoxName);
+      await Hive.deleteBoxFromDisk(categoriesBoxName);
+      await Hive.deleteBoxFromDisk(userProfileBoxName);
+    } catch (e) {
+      print('Error clearing boxes: $e');
+    }
   }
 
   // Getters for boxes
@@ -59,5 +80,11 @@ class HiveService {
     await _wordsBox.clear();
     await _categoriesBox.clear();
     await _userProfileBox.clear();
+  }
+
+  static Future<void> forceResetDatabase() async {
+    await close();
+    await _clearAllBoxes();
+    await init();
   }
 }

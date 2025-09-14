@@ -23,9 +23,10 @@ class CategoriesRepository {
   Category? findCategoryByPartialIdGroup(String partialIdGroup) {
     final partialInt = int.tryParse(partialIdGroup);
     if (partialInt == null) return null;
-    
+
     return HiveService.categoriesBox.values
-        .where((category) => category.idGroup.toString().startsWith(partialIdGroup))
+        .where((category) =>
+            category.idGroup.toString().startsWith(partialIdGroup))
         .firstOrNull;
   }
 
