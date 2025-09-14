@@ -1,0 +1,254 @@
+{
+  "appTitle": "SPYGAM",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "welcome": "Welcome",
+  "@welcome": {
+    "description": "Welcome message"
+  },
+  "loginTitle": "Login",
+  "@loginTitle": {
+    "description": "Title for login screen"
+  },
+  "registerTitle": "Register",
+  "@registerTitle": {
+    "description": "Title for register screen"
+  },
+  "playAsGuest": "Play as Guest",
+  "@playAsGuest": {
+    "description": "Button text for guest mode"
+  },
+  "email": "Email",
+  "@email": {
+    "description": "Email input label"
+  },
+  "password": "Password",
+  "@password": {
+    "description": "Password input label"
+  },
+  "login": "Login",
+  "@login": {
+    "description": "Login button text"
+  },
+  "register": "Register",
+  "@register": {
+    "description": "Register button text"
+  },
+  "profile": "Profile",
+  "@profile": {
+    "description": "Profile screen title"
+  },
+  "game": "Game",
+  "@game": {
+    "description": "Game screen title"
+  },
+  "nativeLanguage": "Native Language",
+  "@nativeLanguage": {
+    "description": "Native language selection label"
+  },
+  "learningLanguage": "Learning Language",
+  "@learningLanguage": {
+    "description": "Learning language selection label"
+  },
+  "currentLevel": "Current Level",
+  "@currentLevel": {
+    "description": "Current level label"
+  },
+  "progress": "Progress",
+  "@progress": {
+    "description": "Progress label"
+  },
+  "rankings": "Rankings",
+  "@rankings": {
+    "description": "Rankings section title"
+  },
+  "comingSoon": "Coming Soon",
+  "@comingSoon": {
+    "description": "Coming soon message"
+  },
+  "totalPoints": "Total Points",
+  "@totalPoints": {
+    "description": "Total points label"
+  },
+  "correctWords": "Correct Words",
+  "@correctWords": {
+    "description": "Correct words counter"
+  },
+  "failedWords": "Failed Words",
+  "@failedWords": {
+    "description": "Failed words counter"
+  },
+  "enterYourGuess": "Enter your guess",
+  "@enterYourGuess": {
+    "description": "Placeholder text for word guess input"
+  },
+  "submit": "Submit",
+  "@submit": {
+    "description": "Submit button text"
+  },
+  "attempts": "Attempts",
+  "@attempts": {
+    "description": "Attempts counter"
+  },
+  "points": "Points",
+  "@points": {
+    "description": "Points label"
+  },
+  "time": "Time",
+  "@time": {
+    "description": "Time label"
+  },
+  "veryCold": "Very Cold",
+  "@veryCold": {
+    "description": "Temperature clue: very cold"
+  },
+  "cold": "Cold",
+  "@cold": {
+    "description": "Temperature clue: cold"
+  },
+  "warm": "Warm",
+  "@warm": {
+    "description": "Temperature clue: warm"
+  },
+  "hot": "Hot",
+  "@hot": {
+    "description": "Temperature clue: hot"
+  },
+  "burning": "Burning",
+  "@burning": {
+    "description": "Temperature clue: burning"
+  },
+  "hintUsed": "Hint Used",
+  "@hintUsed": {
+    "description": "Indicates a hint was used"
+  },
+  "apprenticeMode": "Apprentice Mode",
+  "@apprenticeMode": {
+    "description": "Apprentice game mode"
+  },
+  "quickRounds": "Quick Rounds",
+  "@quickRounds": {
+    "description": "Quick rounds game mode"
+  },
+  "vsFriends": "Vs Friends",
+  "@vsFriends": {
+    "description": "Vs friends game mode"
+  },
+  "gameOver": "Game Over",
+  "@gameOver": {
+    "description": "Game over message"
+  },
+  "correctAnswer": "The correct answer was:",
+  "@correctAnswer": {
+    "description": "Shows the correct answer after game over"
+  },
+  "endRound": "End Round",
+  "@endRound": {
+    "description": "End round button"
+  },
+  "playHangman": "Play Hangman",
+  "@playHangman": {
+    "description": "Play hangman button"
+  },
+  "wordNotValid": "Word not valid",
+  "@wordNotValid": {
+    "description": "Error message for invalid word"
+  },
+  "congratulations": "Congratulations!",
+  "@congratulations": {
+    "description": "Congratulations message"
+  },
+  "nextRound": "Next Round",
+  "@nextRound": {
+    "description": "Next round button"
+  },
+  "level": "Level",
+  "@level": {
+    "description": "Level label"
+  },
+  "temperature": "Temperature",
+  "@temperature": {
+    "description": "Temperature clue label"
+  },
+  "spanish": "Spanish",
+  "@spanish": {
+    "description": "Spanish language"
+  },
+  "english": "English",
+  "@english": {
+    "description": "English language"
+  },
+  "italian": "Italian",
+  "@italian": {
+    "description": "Italian language"
+  },
+  "french": "French",
+  "@french": {
+    "description": "French language"
+  },
+  "german": "German",
+  "@german": {
+    "description": "German language"
+  },
+  "portuguese": "Portuguese",
+  "@portuguese": {
+    "description": "Portuguese language"
+  },
+  "levelA1": "Beginner (A1)",
+  "@levelA1": {
+    "description": "A1 level description"
+  },
+  "levelA2": "Elementary (A2)",
+  "@levelA2": {
+    "description": "A2 level description"
+  },
+  "levelB1": "Intermediate (B1)",
+  "@levelB1": {
+    "description": "B1 level description"
+  },
+  "levelB2": "Upper Intermediate (B2)",
+  "@levelB2": {
+    "description": "B2 level description"
+  },
+  "levelC1": "Advanced (C1)",
+  "@levelC1": {
+    "description": "C1 level description"
+  },
+  "levelC2": "Proficient (C2)",
+  "@levelC2": {
+    "description": "C2 level description"
+  },
+  "emailRequired": "Email is required",
+  "@emailRequired": {
+    "description": "Email validation error"
+  },
+  "invalidEmail": "Please enter a valid email",
+  "@invalidEmail": {
+    "description": "Email format validation error"
+  },
+  "passwordRequired": "Password is required",
+  "@passwordRequired": {
+    "description": "Password validation error"
+  },
+  "passwordTooShort": "Password must be at least 6 characters",
+  "@passwordTooShort": {
+    "description": "Password length validation error"
+  },
+  "loginFailed": "Login failed. Please check your credentials.",
+  "@loginFailed": {
+    "description": "Login error message"
+  },
+  "emailAlreadyExists": "This email is already registered",
+  "@emailAlreadyExists": {
+    "description": "Registration error for existing email"
+  },
+  "registrationFailed": "Registration failed. Please try again.",
+  "@registrationFailed": {
+    "description": "Registration error message"
+  },
+  "logout": "Logout",
+  "@logout": {
+    "description": "Logout button"
+  }
+}
